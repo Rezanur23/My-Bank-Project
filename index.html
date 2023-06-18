@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Green Bank</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="login-area">
+		<div class="submit-area">
+			<h1 class="text-center">Welcome to Green Bank</h1>
+			<br>
+			<h3>Login</h3>
+			<br>
+			<input id="emailInput" type="text" class="form-control" placeholder="example@gmail.com">
+			<br>
+			<input id="passwordInput" type="password" name="" id="" class="form-control" placeholder="password">
+			<br>
+			<button id="loginButton" class="btn btn-success"><h4>Submit</h4></button>
+			<br>
+			<!-- div for alert message -->
+			<h4 id="messageContainer-login" class="message-container"></h4>
+		</div>
+	</div>
+	<div id="transaction-area">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="deposit status">
+					<h5>Deposit</h5>
+					<h2>$ <span id="currentDeposit">00</span></h2>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="withdraw status">
+					<h5>Withdraw</h5>
+					<h2>$ <span id="currentWithdraw">00</span></h2>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="balance status">
+					<h5>Balance</h5>
+					<h2>$ <span id="currentBalance">1000</span></h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="submit-area2">
+					<h4>Deposit</h4>
+					<br>
+					<input id="depositAmount" type="text" class="form-control" placeholder="$ amount you want to deposit">
+					<br>
+					<button id="addDeposit" class="btn btn-success"><h5>Deposit</h5></button>
+					<br>
+						<!-- div for alert message -->
+					<h5 id="messageContainer-deposit" class="message-container"></h5>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="submit-area2">
+					<h4>Withdraw</h4>
+					<br>
+					<input id="withdrawAmount" type="text" class="form-control" placeholder="$ amount you want to withdraw">
+					<br>
+					<button id="addWithdraw" class="btn btn-success"><h5 id="withdrawBtn">Withdraw</h5></button>
+					<br>
+					<!-- div for alert message -->
+					<h5 id="messageContainer-withdraw" class="message-container"></h5>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		<div class="div">
+			<h5 class="foot">&copy; 2023 Green Bank. All rights reserved.<br>Site was developed by &copy; MD Rezanur Rahman</h5>
+		</div>
+	</footer>
+
+	<script src="script.js"></script>
+
+</body>
+</html>
