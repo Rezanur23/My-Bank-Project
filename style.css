@@ -19,7 +19,7 @@ body{
 .moving-text {
 	display: inline-block;
 	animation: moveRight 10s linear infinite;
-	color: #4169E1;
+	color: black;
 	font-weight:bold;
 }
 
