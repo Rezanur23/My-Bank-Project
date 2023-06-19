@@ -5,6 +5,42 @@ body{
 	background-position: center;
 	background-size: cover;
 }
+.moving-text-container {
+	overflow: hidden;
+	white-space: nowrap;
+	background-color: #f2f2f2;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	
+}
+
+.moving-text {
+	display: inline-block;
+	animation: moveRight 12s linear infinite;
+	color: #4169E1;
+	font-weight:bold;
+}
+
+@keyframes moveRight {
+	0% {
+	transform: translateX(100%);
+	}
+	100% {
+	transform: translateX(-100%);
+	}
+}
+.first-heading{
+	font-weight: bold;
+	color: green;
+}
+.depositHeading{
+	color:green;
+}
+.withdrawHeading{
+	color: red;
+}
 .form-control{
 	width:100%;
 	height: calc(3em + 0.75rem + 2px);

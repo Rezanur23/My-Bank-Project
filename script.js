@@ -15,7 +15,6 @@
 						loginArea.style.display = "none";
 						transactionArea.style.display = "block";
 					}, 1000);
-					
 				// Perform further actions or redirect to another page
 			} else {
 				showMessage("Invalid email or password! Please try again.", "red", "login");
@@ -87,3 +86,9 @@
 			const totalAmount = addedNumber + currentNumber;
 			document.getElementById(id).innerText = totalAmount;			
 		}
+
+	// Simulated login function
+	function login() {
+		// Stop the animation when the user is logged in
+		document.getElementById("moving-text").style.animation = "none";
+	}
