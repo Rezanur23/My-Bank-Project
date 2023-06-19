@@ -60,7 +60,7 @@ h3{
 	padding: 30px;
 	border-radius: 10px;
 	box-shadow: 5px 5px 10px gray;
-	background-color: aliceblue;
+	background-color: #b5dcff;
 	opacity: 0.9;
 }
 .submit-area button {
@@ -96,7 +96,7 @@ h3{
 	background-color: orange;
 }
 .message-container{
-	float: right;
+	text-align: center;
 }
 .status {
 	margin: 0 20px;
