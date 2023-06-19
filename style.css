@@ -1,5 +1,5 @@
 body{
-	padding: 100px;
+	padding: 50px;
 	background-image: url(https://images.unsplash.com/photo-1488998527040-85054a85150e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80);
 	background-repeat: no-repeat;
 	background-position: center;
@@ -18,7 +18,7 @@ body{
 
 .moving-text {
 	display: inline-block;
-	animation: moveRight 12s linear infinite;
+	animation: moveRight 10s linear infinite;
 	color: #4169E1;
 	font-weight:bold;
 }
@@ -30,6 +30,10 @@ body{
 	100% {
 	transform: translateX(-100%);
 	}
+}
+h3{
+	text-align: center;
+	font-weight: bold;
 }
 .first-heading{
 	font-weight: bold;
@@ -44,6 +48,7 @@ body{
 .form-control{
 	width:100%;
 	height: calc(3em + 0.75rem + 2px);
+	margin-bottom: 5px;
 }
 .submit-area {
 	display: flex;
@@ -52,7 +57,7 @@ body{
 	justify-content: center;
 	align-items: stretch;
 	margin: 40px;
-	padding: 25px;
+	padding: 30px;
 	border-radius: 10px;
 	box-shadow: 5px 5px 10px gray;
 	background-color: aliceblue;
@@ -129,6 +134,55 @@ body{
 	opacity: 0.8;
 }
 
+/* Responsive styles */
+
+@media (max-width: 1024px) {
+	.submit-area,
+	.submit-area2 {
+		margin: 20px;
+		padding: 30px;
+	}
+	.form-control{
+		height: calc(2em + 0.65rem + 2px);
+		margin-bottom: 5px;
+	}
+	.message-container{
+		font-size: 1.10rem;
+		text-align: center;
+	}
+}
+
+/* responsive for 768px */
+
+@media (max-width: 768px) {
+	body {
+		padding: 30px;
+	}
+	h1{
+		font-size: 25PX;
+	}
+	.status {
+		margin: 10px;
+		padding: 5px;
+	}
+	.form-control{
+		height: calc(2em + 0.65rem + 2px);
+		margin-bottom: 5px;
+	}
+	.message-container{
+		font-size: medium;
+		text-align: center;
+	}
+	.submit-area {
+		margin: 10px;
+		padding: 30px;
+	}
+
+	.submit-area2{
+		padding: 15px;
+	}
+}
+/* responsive for 576px */
 @media (max-width: 576px) {
 
 	h1{
@@ -151,7 +205,7 @@ body{
 	.message-container{
 		font-size: medium;
 		float: right;
-}
+	}
 
 	.status {
 		margin: 10px;
@@ -170,5 +224,50 @@ body{
 	}
 	.foot{
 		font-size: inherit;
+	}
+}
+/* responsive for 480px */
+@media (max-width: 480px) {
+	body {
+		padding: 15px;
+	}
+	h1{
+		font-size:18px;
+	}
+	h3{
+		font-size: 18px;
+		text-align: center;
+	}
+	.form-control{
+		height: calc(1.5em + 0.65rem + 2px);
+		margin-bottom: 5px;
+	}
+	.submit-area,
+	.submit-area2 {
+		margin: 5px;
+		padding: 10px;
+	}
+	.message-container{
+		font-size: medium;
+		float: right;
+	}
+	.status {
+		margin: 10px;
+		padding: 5px;
+	}
+
+	.status h5 {
+		font-size: 18px;
+	}
+
+	.status h2 {
+		font-size: 20px;
+	}
+
+	.status span {
+		font-size: 14px;
+	}
+	.foot{
+		font-size: small;
 	}
 }
