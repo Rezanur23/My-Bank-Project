@@ -9,10 +9,14 @@
 </head>
 <body>
 	<div id="login-area">
+		<!-- alert for login details -->
+		<div class="alert alert-info alert-dismissible" role="alert">
+			Please enter your login details: "example@gmail.com" as Email and "password" as password.
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
 		<div class="submit-area">
-			<div class="moving-text-container">
-				<span class="moving-text">Please enter your login details: "example@gmail.com" as Email and "password" as password... Have a good time.</span>
-			</div>
 			<br>
 			<h1 class="text-center first-heading">Welcome to Green Bank</h1>
 			<br>
@@ -74,6 +78,10 @@
 					<h5 id="messageContainer-withdraw" class="message-container"></h5>
 				</div>
 			</div>
+		</div>
+		<br>
+		<div id="logoutButton" class="btn btn-danger">
+			<h4>Logout</h4>
 		</div>
 	</div>
 	<footer>

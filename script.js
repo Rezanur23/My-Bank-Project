@@ -1,7 +1,26 @@
+		// Close button event handler for hiding the alert
+		const closeAlertButton = document.querySelector(".close");
+		closeAlertButton.addEventListener("click", function() {
+			const alertElement = document.querySelector(".alert");
+			alertElement.style.display = "none";
+		});
+		
 		// Login button event handler
 		const loginBtn = document.getElementById("loginButton");
 		const loginArea = document.getElementById("login-area");
 		const transactionArea = document.getElementById("transaction-area");
+
+
+		// Check if the user is already logged in
+		const isLoggedIn = sessionStorage.getItem("isLoggedIn");
+
+		// If logged in, hide the login area and show the transaction area
+		if (isLoggedIn) {
+		loginArea.style.display = "none";
+		transactionArea.style.display = "block";
+		}
+
+
 
 		loginBtn.addEventListener("click", function(){
 			const email = document.getElementById("emailInput").value;
@@ -10,6 +29,10 @@
 			// Perform matching check
 			if (email === "example@gmail.com" && password === "password") {
 					showMessage("Login successful!", "green", "login");
+						// Store the logged-in state in sessionStorage
+						sessionStorage.setItem("isLoggedIn", "true");
+						sessionStorage.removeItem("isLoggedOut");
+
 
 					setTimeout(function() {
 						loginArea.style.display = "none";
@@ -18,8 +41,26 @@
 				// Perform further actions or redirect to another page
 			} else {
 				showMessage("Invalid email or password! Please try again.", "red", "login");
+				
+				// Clear the logged-in state
+				sessionStorage.removeItem("isLoggedIn");
 			}
 		});
+
+		
+	// logout button event handler
+	const logoutBtn = document.getElementById("logoutButton");
+	logoutBtn.addEventListener("click", function() {
+		loginArea.style.display = "block";
+		transactionArea.style.display = "none";
+
+		// Store the logged-out state in sessionStorage
+		sessionStorage.setItem("isLoggedOut", "true");
+		sessionStorage.removeItem("isLoggedIn");
+		
+		// Reload the page to prevent automatic login on page reload
+		location.reload();
+	});
 
 		// function to show message with color
 		function showMessage(message, color, buttonId){
@@ -86,9 +127,3 @@
 			const totalAmount = addedNumber + currentNumber;
 			document.getElementById(id).innerText = totalAmount;			
 		}
-
-	// Simulated login function
-	function login() {
-		// Stop the animation when the user is logged in
-		document.getElementById("moving-text").style.animation = "none";
-	}

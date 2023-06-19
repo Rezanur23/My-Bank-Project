@@ -5,35 +5,20 @@ body{
 	background-position: center;
 	background-size: cover;
 }
-.moving-text-container {
-	overflow: hidden;
-	white-space: nowrap;
-	background-color: #f2f2f2;
-	padding: 10px;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-	
-}
-
-.moving-text {
-	display: inline-block;
-	animation: moveRight 10s linear infinite;
+.alert{
 	color: black;
 	font-weight:bold;
-}
-
-@keyframes moveRight {
-	0% {
-	transform: translateX(100%);
-	}
-	100% {
-	transform: translateX(-100%);
-	}
+	background-color: #62c7c7;
+	box-shadow:0 2px 4px rgba(0, 0, 0, 0.98);
+	text-align: center;
+	margin: 40px;
 }
 h3{
 	text-align: center;
 	font-weight: bold;
+}
+h4{
+	text-align: center;
 }
 .first-heading{
 	font-weight: bold;
@@ -124,6 +109,12 @@ h3{
 .btn{
 	padding-bottom: 0;
 }
+#logoutButton{
+	align-items: center;
+	display: block;
+	border-radius: 10px;
+	box-shadow:0 2px 4px rgba(0, 0, 0, 0.98);
+}
 .foot{
     margin-top: 46px;
     text-align: center;
@@ -137,6 +128,9 @@ h3{
 /* Responsive styles */
 
 @media (max-width: 1024px) {
+	.alert{
+		margin: 22px;
+	}
 	.submit-area,
 	.submit-area2 {
 		margin: 20px;
@@ -156,10 +150,13 @@ h3{
 
 @media (max-width: 768px) {
 	body {
-		padding: 30px;
+		padding: 15px;
 	}
 	h1{
 		font-size: 25PX;
+	}
+	.alert{
+		margin: 10px;
 	}
 	.status {
 		margin: 10px;
@@ -192,11 +189,13 @@ h3{
 		font-size: 18px;
 		text-align: center;
 	}
+	.alert{
+		font-size: medium;
+	}
 	.submit-area {
 		margin: 10px;
 		padding: 30px;
 	}
-
 	.submit-area2 {
 		margin-top: 10px;
 		margin-bottom: 20px;
@@ -228,15 +227,15 @@ h3{
 }
 /* responsive for 480px */
 @media (max-width: 480px) {
-	body {
-		padding: 15px;
-	}
 	h1{
 		font-size:18px;
 	}
 	h3{
 		font-size: 18px;
 		text-align: center;
+	}
+	.alert{
+		font-size: smaller;
 	}
 	.form-control{
 		height: calc(1.5em + 0.65rem + 2px);
